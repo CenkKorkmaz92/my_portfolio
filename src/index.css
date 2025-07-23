@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global text selection styling */
+::selection {
+  background-color: rgb(254 215 170); /* orange-200 */
+  color: rgb(154 52 18); /* orange-800 */
+}
+
+::-moz-selection {
+  background-color: rgb(254 215 170); /* orange-200 */
+  color: rgb(154 52 18); /* orange-800 */
+}
+
+/* Autofill styling for input fields */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+  -webkit-text-fill-color: rgb(234 88 12) !important; /* orange-600 */
+  -webkit-box-shadow: 0 0 0 30px rgb(255 247 237) inset !important; /* orange-50 */
+  box-shadow: 0 0 0 30px rgb(255 247 237) inset !important;
+}
+
+input:-webkit-autofill::first-line,
+textarea:-webkit-autofill::first-line {
+  color: rgb(234 88 12) !important; /* orange-600 */
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -35,6 +65,11 @@ All colors MUST be HSL.
     --border: 220 13% 91%;
     --input: 220 13% 91%;
     --ring: 220 13% 18%;
+
+    /* Accent colors */
+    --accent-blue: 217 91% 60%;
+    --accent-success: 142 76% 36%;
+    --accent-warning: 38 92% 50%;
 
     /* Modern gradients */
     --gradient-primary: linear-gradient(135deg, hsl(220 13% 18%) 0%, hsl(220 8% 25%) 100%);
@@ -158,5 +193,68 @@ All colors MUST be HSL.
 
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+
+  /* New gradient text effect */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(220 13% 18%) 0%, hsl(220 8% 45%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Enhanced hover effects for cards */
+  .card-hover {
+    @apply transition-smooth hover:scale-[1.02] hover:shadow-large;
+  }
+
+  /* Staggered animations */
+  .animate-stagger > * {
+    animation-delay: calc(var(--stagger, 0) * 0.1s);
+  }
+
+  /* Scroll-triggered animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-slide-left.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .animate-slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-slide-right.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .animate-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-scale.in-view {
+    opacity: 1;
+    transform: scale(1);
   }
 }

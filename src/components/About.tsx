@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Code2, Database, Palette, Brain } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const About = () => {
   const highlights = [
@@ -29,71 +30,79 @@ const About = () => {
     <section id="about" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">
-            About Me
-          </h2>
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+              About Me
+            </h2>
+          </AnimatedSection>
           
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="animate-slide-in">
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                I'm a passionate fullstack developer who combines strong technical skills with 
-                real-world problem-solving experience. With a keen interest in AI development, 
-                I'm excited about the intersection of traditional web development and artificial intelligence.
-              </p>
-              
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Currently exploring the latest open source AI models and looking forward to developing 
-                local AI solutions. I believe the future of web development lies in intelligent applications 
-                that can adapt and learn from user interactions.
-              </p>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I specialize in modern technologies including React, TypeScript, Angular, Python, Django, 
-                and PostgreSQL. My goal is to bridge the gap between robust fullstack development and 
-                cutting-edge AI capabilities to create truly innovative applications.
-              </p>
-            </div>
+            <AnimatedSection animation="slide-left">
+              <div>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  I'm a passionate fullstack developer who combines strong technical skills with 
+                  real-world problem-solving experience. With a keen interest in AI development, 
+                  I'm excited about the intersection of traditional web development and artificial intelligence.
+                </p>
+                
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  Currently exploring the latest open source AI models and looking forward to developing 
+                  local AI solutions. I believe the future of web development lies in intelligent applications 
+                  that can adapt and learn from user interactions.
+                </p>
+                
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  I specialize in modern technologies including React, TypeScript, Angular, Python, Django, 
+                  and PostgreSQL. My goal is to bridge the gap between robust fullstack development and 
+                  cutting-edge AI capabilities to create truly innovative applications.
+                </p>
+              </div>
+            </AnimatedSection>
             
-            <div className="bg-gradient-card rounded-2xl p-8 shadow-large animate-fade-in-up">
-              <h3 className="text-2xl font-semibold mb-6">Quick Facts</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Specialization</span>
-                  <span className="font-medium">Fullstack + AI Development</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Frontend</span>
-                  <span className="font-medium">React, Angular, TypeScript</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Backend</span>
-                  <span className="font-medium">Python, Django, PostgreSQL</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Interest</span>
-                  <span className="font-medium">Open Source AI & Local Models</span>
+            <AnimatedSection animation="slide-right">
+              <div className="bg-gradient-card rounded-2xl p-8 shadow-large">
+                <h3 className="text-2xl font-semibold mb-6">Quick Facts</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">Specialization</span>
+                    <span className="font-medium">Fullstack + AI Development</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">Frontend</span>
+                    <span className="font-medium">React, Angular, TypeScript</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">Backend</span>
+                    <span className="font-medium">Python, Django, PostgreSQL</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">Interest</span>
+                    <span className="font-medium">Open Source AI & Local Models</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {highlights.map((highlight, index) => (
-              <Card 
-                key={highlight.title} 
-                className="bg-gradient-card shadow-medium hover:shadow-large transition-smooth border-0 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+              <AnimatedSection 
+                key={highlight.title}
+                animation="scale"
+                delay={index * 100}
               >
-                <CardContent className="p-6 text-center">
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <highlight.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-2">{highlight.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {highlight.description}
-                  </p>
-                </CardContent>
-              </Card>
+                <Card className="bg-gradient-card shadow-medium hover:shadow-large transition-smooth border-0">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-orange-200 transition-colors">
+                      <highlight.icon className="w-8 h-8 text-orange-600" />
+                    </div>
+                    <h3 className="font-semibold mb-2">{highlight.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {highlight.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
             ))}
           </div>
         </div>

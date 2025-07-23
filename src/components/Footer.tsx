@@ -25,7 +25,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="#about" 
-                    className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
+                    className="text-primary-foreground/80 hover:text-orange-400 transition-colors duration-300"
                   >
                     About
                   </a>
@@ -33,7 +33,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="#skills" 
-                    className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
+                    className="text-primary-foreground/80 hover:text-orange-400 transition-colors duration-300"
                   >
                     Skills
                   </a>
@@ -41,7 +41,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="#projects" 
-                    className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
+                    className="text-primary-foreground/80 hover:text-orange-400 transition-colors duration-300"
                   >
                     Projects
                   </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="#contact" 
-                    className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
+                    className="text-primary-foreground/80 hover:text-orange-400 transition-colors duration-300"
                   >
                     Contact
                   </a>
@@ -70,7 +70,7 @@ const Footer = () => {
                   href="https://github.com/CenkKorkmaz92" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth p-2 rounded-full hover:bg-primary-foreground/10"
+                  className="text-primary-foreground/80 hover:text-orange-400 hover:scale-110 transition-all duration-300"
                 >
                   <Github size={20} />
                 </a>
@@ -78,13 +78,13 @@ const Footer = () => {
                   href="https://www.linkedin.com/in/cenk-korkmaz-2731072a5" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth p-2 rounded-full hover:bg-primary-foreground/10"
+                  className="text-primary-foreground/80 hover:text-blue-400 hover:scale-110 transition-all duration-300"
                 >
                   <Linkedin size={20} />
                 </a>
                 <a 
                   href="mailto:Cenk.Korkmaz92@gmail.com"
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth p-2 rounded-full hover:bg-primary-foreground/10"
+                  className="text-primary-foreground/80 hover:text-orange-400 hover:scale-110 transition-all duration-300"
                 >
                   <Mail size={20} />
                 </a>
@@ -101,13 +101,13 @@ const Footer = () => {
               <div className="flex gap-4 text-sm">
                 <Link 
                   to="/impressum" 
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
+                  className="text-primary-foreground/80 hover:text-orange-400 transition-colors duration-300"
                 >
                   Impressum
                 </Link>
                 <Link 
                   to="/privacy" 
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
+                  className="text-primary-foreground/80 hover:text-orange-400 transition-colors duration-300"
                 >
                   Privacy Policy
                 </Link>
