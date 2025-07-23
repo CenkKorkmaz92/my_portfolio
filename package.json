@@ -1,8 +1,11 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "cenk-korkmaz-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Modern portfolio website showcasing fullstack development skills",
+  "author": "Cenk Korkmaz <Cenk.Korkmaz92@gmail.com>",
+  "homepage": "https://github.com/CenkKorkmaz92/my_portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,6 +14,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-alert-dialog": "^1.1.1",

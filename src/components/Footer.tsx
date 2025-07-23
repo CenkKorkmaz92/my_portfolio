@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -60,13 +61,13 @@ const Footer = () => {
             <div className="animate-slide-in">
               <h4 className="font-semibold mb-4">Let's Connect</h4>
               <div className="space-y-2 mb-6">
-                <p className="text-primary-foreground/80">your.email@example.com</p>
-                <p className="text-primary-foreground/80">Available for Remote Work</p>
+                <p className="text-primary-foreground/80">Cenk.Korkmaz92@gmail.com</p>
+                <p className="text-primary-foreground/80">Sulzbach an der Murr, Germany</p>
               </div>
               
               <div className="flex space-x-4">
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/CenkKorkmaz92" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth p-2 rounded-full hover:bg-primary-foreground/10"
@@ -74,7 +75,7 @@ const Footer = () => {
                   <Github size={20} />
                 </a>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/cenk-korkmaz-2731072a5" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth p-2 rounded-full hover:bg-primary-foreground/10"
@@ -82,7 +83,7 @@ const Footer = () => {
                   <Linkedin size={20} />
                 </a>
                 <a 
-                  href="mailto:your.email@example.com"
+                  href="mailto:Cenk.Korkmaz92@gmail.com"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth p-2 rounded-full hover:bg-primary-foreground/10"
                 >
                   <Mail size={20} />
@@ -93,9 +94,25 @@ const Footer = () => {
 
           {/* Bottom Bar */}
           <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-primary-foreground/80 text-sm mb-4 md:mb-0">
-              © {currentYear} Junior Fullstack Developer. All rights reserved.
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
+              <p className="text-primary-foreground/80 text-sm">
+                © {currentYear} Cenk Korkmaz. All rights reserved.
+              </p>
+              <div className="flex gap-4 text-sm">
+                <Link 
+                  to="/impressum" 
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
+                >
+                  Impressum
+                </Link>
+                <Link 
+                  to="/privacy" 
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth"
+                >
+                  Privacy Policy
+                </Link>
+              </div>
+            </div>
             <p className="text-primary-foreground/80 text-sm flex items-center gap-1">
               Built with <Heart size={16} className="text-red-400" /> using React & TypeScript
             </p>

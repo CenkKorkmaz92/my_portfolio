@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,16 +13,43 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend service
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', message: '' });
+    setIsLoading(true);
+
+    try {
+      // EmailJS configuration using environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_name: 'Cenk Korkmaz',
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -35,19 +63,13 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "Cenk.Korkmaz92@gmail.com",
+      href: "mailto:Cenk.Korkmaz92@gmail.com"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Available for Remote Work",
+      value: "71560 Sulzbach an der Murr, Germany",
       href: "#"
     }
   ];
@@ -76,9 +98,9 @@ const Contact = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground text-center mb-16 max-w-3xl mx-auto animate-fade-in-up">
-            I'm actively looking for opportunities to start my career as a fullstack developer. 
-            After completing 18 months of intensive study and making the commitment to pursue coding 
-            full-time, I'm ready to bring my skills, dedication, and fresh perspective to your team!
+            I'm actively seeking opportunities to begin my career as a fullstack developer. 
+            With comprehensive training in modern web technologies and a passion for creating 
+            innovative solutions, I'm ready to contribute my skills and enthusiasm to your team!
           </p>
           
           <div className="grid lg:grid-cols-2 gap-12">
@@ -125,8 +147,9 @@ const Contact = () => {
                     type="submit" 
                     className="w-full shadow-medium hover:shadow-large transition-smooth"
                     size="lg"
+                    disabled={isLoading}
                   >
-                    Send Message
+                    {isLoading ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
@@ -137,9 +160,10 @@ const Contact = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  After 18 months of intensive study while working full-time, I made the committed 
-                  decision to pursue coding full-time starting January 2025. I'm excited to start 
-                  my career in web development and contribute to meaningful projects.
+                  I'm passionate about web development and excited to start my professional journey 
+                  in tech. With a solid foundation in modern technologies and a commitment to 
+                  continuous learning, I'm ready to contribute to meaningful projects and grow with 
+                  an innovative team.
                 </p>
               </div>
 

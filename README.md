@@ -1,32 +1,49 @@
-# Portfolio Website
+# Cenk Korkmaz - Portfolio Website
 
-A modern, responsive portfolio website built with React and TypeScript, featuring a clean white and gray design with smooth animations.
+A modern, responsive portfolioVITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+## 📄 Available Scripts
+
+```bash
+npm run dev          # Start development server on localhost:5173
+npm run build        # Build for production (outputs to /dist)
+npm run preview      # Preview production build locally
+npm run lint         # Run ESLint for code quality
+```owcasing my fullstack development skills and projects. Built with React, TypeScript, and modern web technologies with a clean white and gray design.
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://your-portfolio-url.com) *(Coming Soon)*
+[View Live Portfolio](https://your-domain.com) *(Coming Soon)*
 
 ## ✨ Features
 
-- **Responsive Design** - Optimized for all screen sizes
-- **Modern UI/UX** - Clean, minimal design with smooth animations
+- **Modern Design** - Clean, minimal white/gray aesthetic with smooth animations
+- **Responsive Layout** - Optimized for all devices and screen sizes
+- **Contact Form** - Working email contact form with EmailJS integration
+- **Project Showcase** - Real projects with live demos and GitHub links
+- **Legal Compliance** - Privacy Policy and Legal Notice pages for EU/German law
+- **Performance Optimized** - Fast loading with Vite build system
 - **TypeScript** - Type-safe development experience
-- **Performance Optimized** - Fast loading with Vite
-- **Accessible** - Built with accessibility best practices
 
-## 🛠️ Built With
+## 🛠️ Tech Stack
 
-- **React 18** - Modern React with hooks
-- **TypeScript** - Type safety and better DX
-- **Vite** - Fast build tool and dev server
+### Frontend
+- **React 18** - Modern React with functional components and hooks
+- **TypeScript** - Type safety and enhanced developer experience
+- **Vite** - Fast build tool and development server
 - **Tailwind CSS** - Utility-first CSS framework
-- **shadcn/ui** - High-quality component library
-- **Lucide React** - Beautiful icons
+- **shadcn/ui** - High-quality, accessible component library
+
+### Features & Integrations
+- **EmailJS** - Contact form email functionality
+- **React Router** - Client-side routing for legal pages
+- **Lucide React** - Beautiful, consistent icons
+- **Responsive Design** - Mobile-first approach
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
 - Node.js 18+ 
 - npm or yarn
 
@@ -47,6 +64,18 @@ npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+### Email Configuration
+
+To enable the contact form:
+
+1. Set up EmailJS account (see `EMAILJS_SETUP.md`)
+2. Create `.env.local` file:
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
 ## � Available Scripts
 

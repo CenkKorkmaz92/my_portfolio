@@ -6,35 +6,35 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration. Built using Django REST framework for the backend and Angular for the frontend.",
-      technologies: ["Angular", "TypeScript", "Django", "Django REST", "PostgreSQL", "Firebase"],
+      title: "Coderr - Freelance Marketplace API",
+      description: "Comprehensive Django REST Framework backend for a freelance marketplace platform. Features user authentication with token-based security, dual user types (customers/business), complete offer management system, order processing workflow, and review system with rating validation. Includes advanced filtering, search capabilities, image upload functionality, and proper permission-based access control.",
+      technologies: ["Django 5.2", "Django REST Framework", "SQLite", "Token Authentication", "CORS", "Image Upload", "API Design"],
       demoUrl: "#",
-      githubUrl: "#",
-      category: "Fullstack"
-    },
-    {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and progress tracking. Built with Angular and Firebase for real-time functionality.",
-      technologies: ["Angular", "TypeScript", "Firebase", "CSS", "HTML5"],
-      demoUrl: "#",
-      githubUrl: "#",
-      category: "Frontend"
-    },
-    {
-      title: "Django REST API",
-      description: "RESTful API service with comprehensive CRUD operations, authentication, data validation, and Redis caching. Built during backend development studies with PostgreSQL database.",
-      technologies: ["Python", "Django", "Django REST", "PostgreSQL", "Redis"],
-      demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/CenkKorkmaz92/coderr",
       category: "Backend"
     },
     {
-      title: "Angular Web App",
-      description: "Interactive web application built with Angular, featuring responsive design, component-based architecture, and Firebase integration for data persistence and authentication.",
-      technologies: ["Angular", "TypeScript", "Firebase", "HTML5", "CSS"],
+      title: "Madame Pearls - Jewelry Showcase",
+      description: "Elegant Angular SPA for a custom jewelry business featuring multilingual support (EN/DE/GR/HR), interactive image galleries with favorites system, smooth scroll navigation, and responsive contact forms. Built with modern Angular standalone components and custom SCSS styling.",
+      technologies: ["Angular 18", "TypeScript", "SCSS", "Standalone Components", "RxJS", "Responsive Design", "i18n"],
       demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/CenkKorkmaz92/Madame-Pearls",
+      category: "Frontend"
+    },
+    {
+      title: "VideoFlix - Netflix Clone",
+      description: "Full-stack video streaming platform with Django REST API backend featuring JWT authentication, automatic video processing into multiple qualities (480p/720p/1080p), HLS streaming with seamless quality switching, Redis background processing, real thumbnail extraction, and PostgreSQL database. Complete Netflix-like experience with user registration, watch progress tracking, and admin panel.",
+      technologies: ["Django", "Django REST", "PostgreSQL", "Redis", "FFmpeg", "HLS Streaming", "JWT", "Docker", "RQ Queue"],
+      demoUrl: "#",
+      githubUrl: "https://github.com/CenkKorkmaz92/videoflix",
+      category: "Fullstack"
+    },
+    {
+      title: "Angular Portfolio - Professional Showcase",
+      description: "Sophisticated Angular 17 portfolio website featuring modern standalone components, multilingual support (EN/DE), advanced SCSS styling with custom animations, interactive modals, and responsive design. Showcases professional UI/UX capabilities with custom design system, smooth transitions, and comprehensive skill demonstrations including growth mindset popup.",
+      technologies: ["Angular 17", "TypeScript", "SCSS", "RxJS", "i18n", "Responsive Design", "Custom Animations"],
+      demoUrl: "#",
+      githubUrl: "https://github.com/CenkKorkmaz92/portfolio",
       category: "Frontend"
     }
   ];
