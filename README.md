@@ -45,7 +45,3 @@ Modern, responsive portfolio built with React and TypeScript.
 - **Spacing:** Consistent 4px grid system
 - **Animations:** Smooth transitions and micro-interactions
 - **Responsive:** Mobile-first design approach
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
