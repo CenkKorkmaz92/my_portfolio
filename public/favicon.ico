@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <rect width="32" height="32" rx="6" fill="#4b5563"/>
+  
+  <!-- Letter C -->
+  <path d="M8 16C8 12.5 10.5 10 14 10C15.5 10 16.8 10.6 17.7 11.5L16.5 12.7C15.9 12.1 15.1 11.7 14 11.7C11.5 11.7 9.7 13.5 9.7 16C9.7 18.5 11.5 20.3 14 20.3C15.1 20.3 15.9 19.9 16.5 19.3L17.7 20.5C16.8 21.4 15.5 22 14 22C10.5 22 8 19.5 8 16Z" fill="white"/>
+  
+  <!-- Letter K -->
+  <path d="M19 10H20.5V15.2L23.8 12H25.8L22.2 15.8L26 22H24L21 17.2L20.5 17.7V22H19V10Z" fill="white"/>
+</svg>
