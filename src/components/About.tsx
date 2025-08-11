@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Code2, Database, Palette, Brain } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import meImage from "@/assets/me.jpg";
 
 const About = () => {
   const highlights = [
@@ -60,8 +61,19 @@ const About = () => {
             </AnimatedSection>
             
             <AnimatedSection animation="slide-right">
-              <div className="bg-gradient-card rounded-2xl p-6 sm:p-8 shadow-large">
-                <h3 className="text-xl sm:text-2xl font-semibold mb-6">Quick Facts</h3>
+              <div className="space-y-6">
+                <div className="flex justify-center">
+                  <div className="w-64 h-64 rounded-2xl overflow-hidden shadow-large border-4 border-white">
+                    <img 
+                      src={meImage} 
+                      alt="Cenk Korkmaz - Fullstack Developer" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-card rounded-2xl p-6 sm:p-8 shadow-large">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-6">Quick Facts</h3>
                 <div className="space-y-4">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
                     <span className="text-muted-foreground text-sm sm:text-base">Specialization</span>
@@ -80,6 +92,7 @@ const About = () => {
                     <span className="font-medium text-sm sm:text-base text-right sm:text-left">AI & Local Models</span>
                   </div>
                 </div>
+              </div>
               </div>
             </AnimatedSection>
           </div>

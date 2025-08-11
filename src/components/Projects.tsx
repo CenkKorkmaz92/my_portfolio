@@ -93,7 +93,7 @@ const Projects = () => {
       title: "Madame Pearls - Jewelry Showcase",
       description: "Elegant Angular SPA for a custom jewelry business featuring multilingual support (EN/DE/GR/HR), interactive image galleries with favorites system, smooth scroll navigation, and responsive contact forms. Built with modern Angular standalone components and custom SCSS styling.",
       technologies: ["Angular 18", "TypeScript", "SCSS", "Standalone Components", "RxJS", "Responsive Design", "i18n"],
-      demoUrl: "#",
+      demoUrl: "https://cenk-korkmaz.de/madame-pearls/",
       githubUrl: "https://github.com/CenkKorkmaz92/Madame-Pearls",
       category: "Frontend"
     },
@@ -109,7 +109,7 @@ const Projects = () => {
       title: "Angular Portfolio - Professional Showcase",
       description: "Sophisticated Angular 17 portfolio website featuring modern standalone components, multilingual support (EN/DE), advanced SCSS styling with custom animations, interactive modals, and responsive design. Showcases professional UI/UX capabilities with custom design system, smooth transitions, and comprehensive skill demonstrations including growth mindset popup.",
       technologies: ["Angular 17", "TypeScript", "SCSS", "RxJS", "i18n", "Responsive Design", "Custom Animations"],
-      demoUrl: "#",
+      demoUrl: "https://cenk-korkmaz.de/angular-portfolio/",
       githubUrl: "https://github.com/CenkKorkmaz92/portfolio",
       category: "Frontend"
     }
@@ -169,16 +169,18 @@ const Projects = () => {
                     </div>
                     
                     <div className="flex gap-3 pt-4">
-                      <Button 
-                        size="sm" 
-                        className={`flex items-center gap-2 shadow-soft hover:shadow-medium transition-smooth ${getButtonColors(project.category).primary}`}
-                        asChild
-                      >
-                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink size={16} />
-                          Live Demo
-                        </a>
-                      </Button>
+                      {(project.title !== "Coderr - Freelance Marketplace API" && project.title !== "VideoFlix - Netflix Clone") && (
+                        <Button 
+                          size="sm" 
+                          className={`flex items-center gap-2 shadow-soft hover:shadow-medium transition-smooth ${getButtonColors(project.category).primary}`}
+                          asChild
+                        >
+                          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink size={16} />
+                            Live Demo
+                          </a>
+                        </Button>
+                      )}
                       <Button 
                         variant="outline" 
                         size="sm" 
