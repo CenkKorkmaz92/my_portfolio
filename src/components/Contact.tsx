@@ -76,28 +76,9 @@ const Contact = () => {
       const templateParams = {
         name: formData.name,
         email: formData.email,
-        message: `
-🌟 NEW PORTFOLIO CONTACT 🌟
-
-👤 SENDER DETAILS:
-   Name: ${formData.name}
-   Email: ${formData.email}
-
-📧 MESSAGE:
-${formData.message}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-💬 Reply directly to: ${formData.email}
-🕒 Sent via: cenk-korkmaz.de contact form
-`,
+        message: formData.message,
         from_name: formData.name,
-        from_email: formData.email,
-        user_email: formData.email,
-        sender_email: formData.email,
-        contact_email: formData.email,
-        to_name: 'Cenk Korkmaz',
         reply_to: formData.email,
-        subject: `🚀 Portfolio Contact: ${formData.name}`,
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
