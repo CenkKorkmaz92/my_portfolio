@@ -1,0 +1,5 @@
+/* App specific styles - using Tailwind classes where possible */
+
+.App {
+  @apply min-h-screen bg-background text-foreground;
+}
