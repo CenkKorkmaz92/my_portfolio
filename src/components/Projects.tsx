@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { useTranslation } from "@/hooks/useTranslation";
+import { TranslationKey } from "@/translations/translations";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -75,7 +76,14 @@ const Projects = () => {
     return "border-2 border-orange-600 text-orange-600";
   };
 
-  const projects = [
+  const projects: Array<{
+    titleKey: TranslationKey;
+    descriptionKey: TranslationKey;
+    technologies: string[];
+    demoUrl: string;
+    githubUrl: string;
+    category: string;
+  }> = [
     {
       titleKey: "projects.coderr.title",
       descriptionKey: "projects.coderr.description",
