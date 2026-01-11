@@ -89,7 +89,7 @@ const Projects = () => {
       description: "Elegant Angular SPA for a custom jewelry business featuring multilingual support (EN/DE/GR/HR), interactive image galleries with favorites system, and smooth scroll navigation. This project is currently in development, optimized for desktop use, with plans to add e-commerce functionality later this year. Built with modern Angular standalone components and custom SCSS styling.",
       technologies: ["Angular 18", "TypeScript", "SCSS", "Standalone Components", "RxJS", "Desktop-First Design", "i18n"],
       demoUrl: "https://cenk-korkmaz.de/madame-pearls/",
-      githubUrl: "https://github.com/CenkKorkmaz92/Madame-Pearls",
+      githubUrl: "https://github.com/CenkKorkmaz92/madame_pearls_2.0",
       category: "Frontend"
     },
     {
