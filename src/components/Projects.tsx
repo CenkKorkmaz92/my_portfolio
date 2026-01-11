@@ -77,32 +77,32 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Coderr - Freelance Marketplace API",
-      description: "Comprehensive Django REST Framework backend for a freelance marketplace platform. Features user authentication with token-based security, dual user types (customers/business), complete offer management system, order processing workflow, and review system with rating validation. Includes advanced filtering, search capabilities, image upload functionality, and proper permission-based access control.",
+      titleKey: "projects.coderr.title",
+      descriptionKey: "projects.coderr.description",
       technologies: ["Django 5.2", "Django REST Framework", "SQLite", "Token Authentication", "CORS", "Image Upload", "API Design"],
       demoUrl: "#",
       githubUrl: "https://github.com/CenkKorkmaz92/coderr",
       category: "Backend"
     },
     {
-      title: "Madame Pearls - Jewelry Showcase",
-      description: "Elegant Angular SPA for a custom jewelry business featuring multilingual support (EN/DE/GR/HR), interactive image galleries with favorites system, and smooth scroll navigation. Fully responsive design optimized for both desktop and mobile use. Built with modern Angular standalone components and custom SCSS styling. Completed and awaiting deployment from the owner.",
+      titleKey: "projects.madamePearls.title",
+      descriptionKey: "projects.madamePearls.description",
       technologies: ["Angular 18", "TypeScript", "SCSS", "Standalone Components", "RxJS", "Desktop-First Design", "i18n"],
       demoUrl: "https://cenk-korkmaz.de/madame-pearls/",
       githubUrl: "https://github.com/CenkKorkmaz92/madame_pearls_2.0",
       category: "Frontend"
     },
     {
-      title: "VideoFlix - Netflix Clone",
-      description: "Full-stack video streaming platform with Django REST API backend featuring JWT authentication, automatic video processing into multiple qualities (480p/720p/1080p), HLS streaming with seamless quality switching, Redis background processing, real thumbnail extraction, and PostgreSQL database. Complete Netflix-like experience with user registration, watch progress tracking, and admin panel.",
+      titleKey: "projects.videoflix.title",
+      descriptionKey: "projects.videoflix.description",
       technologies: ["Django", "Django REST", "PostgreSQL", "Redis", "FFmpeg", "HLS Streaming", "JWT", "Docker", "RQ Queue"],
       demoUrl: "#",
       githubUrl: "https://github.com/CenkKorkmaz92/videoflix",
       category: "Fullstack"
     },
     {
-      title: "Angular Portfolio - Professional Showcase",
-      description: "Sophisticated Angular 17 portfolio website featuring modern standalone components, multilingual support (EN/DE), advanced SCSS styling with custom animations, interactive modals, and responsive design. Showcases professional UI/UX capabilities with custom design system, smooth transitions, and comprehensive skill demonstrations including growth mindset popup.",
+      titleKey: "projects.angularPortfolio.title",
+      descriptionKey: "projects.angularPortfolio.description",
       technologies: ["Angular 17", "TypeScript", "SCSS", "RxJS", "i18n", "Responsive Design", "Custom Animations"],
       demoUrl: "https://cenk-korkmaz.de/angular-portfolio/",
       githubUrl: "https://github.com/CenkKorkmaz92/portfolio",
@@ -129,7 +129,7 @@ const Projects = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <AnimatedSection 
-                key={project.title}
+                key={project.titleKey}
                 animation="scale"
                 delay={index * 200}
               >
@@ -137,7 +137,7 @@ const Projects = () => {
                   <CardHeader>
                     <div className="flex justify-between items-start mb-2">
                       <CardTitle className="text-xl font-semibold group-hover:text-primary transition-smooth">
-                        {project.title}
+                        {t(project.titleKey)}
                       </CardTitle>
                       <Badge variant="outline" className={`text-base ${getCategoryColor(project.category)}`}>
                         {project.category}
@@ -146,7 +146,7 @@ const Projects = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-muted-foreground leading-relaxed">
-                      {project.description}
+                      {t(project.descriptionKey)}
                     </p>
                     
                     <div className="flex flex-wrap gap-2">
@@ -162,7 +162,7 @@ const Projects = () => {
                     </div>
                     
                     <div className="flex gap-3 pt-4">
-                      {(project.title !== "Coderr - Freelance Marketplace API" && project.title !== "VideoFlix - Netflix Clone") && (
+                      {(project.titleKey !== "projects.coderr.title" && project.titleKey !== "projects.videoflix.title") && (
                         <Button 
                           size="sm" 
                           className={`flex items-center gap-2 shadow-soft hover:shadow-medium transition-smooth ${getButtonColors(project.category).primary}`}

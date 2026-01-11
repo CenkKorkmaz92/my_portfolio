@@ -47,6 +47,18 @@ export const translations = {
     'projects.liveDemo': 'Live Demo',
     'projects.code': 'Code',
     
+    'projects.coderr.title': 'Coderr - Freelance Marketplace API',
+    'projects.coderr.description': 'Comprehensive Django REST Framework backend for a freelance marketplace platform. Features user authentication with token-based security, dual user types (customers/business), complete offer management system, order processing workflow, and review system with rating validation. Includes advanced filtering, search capabilities, image upload functionality, and proper permission-based access control.',
+    
+    'projects.madamePearls.title': 'Madame Pearls - Jewelry Showcase',
+    'projects.madamePearls.description': 'Elegant Angular SPA for a custom jewelry business featuring multilingual support (EN/DE/GR/HR), interactive image galleries with favorites system, and smooth scroll navigation. Fully responsive design optimized for both desktop and mobile use. Built with modern Angular standalone components and custom SCSS styling. Completed and awaiting deployment from the owner.',
+    
+    'projects.videoflix.title': 'VideoFlix - Netflix Clone',
+    'projects.videoflix.description': 'Full-stack video streaming platform with Django REST API backend featuring JWT authentication, automatic video processing into multiple qualities (480p/720p/1080p), HLS streaming with seamless quality switching, Redis background processing, real thumbnail extraction, and PostgreSQL database. Complete Netflix-like experience with user registration, watch progress tracking, and admin panel.',
+    
+    'projects.angularPortfolio.title': 'Angular Portfolio - Professional Showcase',
+    'projects.angularPortfolio.description': 'Sophisticated Angular 17 portfolio website featuring modern standalone components, multilingual support (EN/DE), advanced SCSS styling with custom animations, interactive modals, and responsive design. Showcases professional UI/UX capabilities with custom design system, smooth transitions, and comprehensive skill demonstrations including growth mindset popup.',
+    
     // Contact
     'contact.title': "Let's Work Together",
     'contact.intro': 'Looking for opportunities where manufacturing expertise meets modern software development. With 13+ years Mercedes-Benz experience and fullstack certification, I bridge shopfloor reality with digital solutions — perfect for Industry 4.0, MES, automation, or production software.',
@@ -117,6 +129,18 @@ export const translations = {
     'projects.viewGithub': 'Alle Projekte auf GitHub',
     'projects.liveDemo': 'Live Demo',
     'projects.code': 'Code',
+    
+    'projects.coderr.title': 'Coderr - Freelance-Marktplatz API',
+    'projects.coderr.description': 'Umfassendes Django REST Framework Backend für eine Freelance-Plattform. Mit Token-basierter Authentifizierung, dualen Benutzertypen (Kunden/Business), komplettem Angebotsverwaltungssystem, Bestellungs-Workflow und Bewertungssystem mit Rating-Validierung. Inkl. erweiterter Filterung, Suchfunktionen, Bild-Upload und berechtigungsbasierter Zugriffskontrolle.',
+    
+    'projects.madamePearls.title': 'Madame Pearls - Schmuck-Präsentation',
+    'projects.madamePearls.description': 'Elegante Angular SPA für ein individuelles Schmuckgeschäft mit mehrsprachiger Unterstützung (EN/DE/GR/HR), interaktiven Bildgalerien mit Favoritensystem und sanfter Scroll-Navigation. Vollständig responsive für Desktop und Mobile. Entwickelt mit modernen Angular Standalone Components und individuellem SCSS-Styling. Fertiggestellt und wartet auf Deployment durch den Eigentümer.',
+    
+    'projects.videoflix.title': 'VideoFlix - Netflix Clone',
+    'projects.videoflix.description': 'Full-Stack Video-Streaming-Plattform mit Django REST API Backend inkl. JWT-Authentifizierung, automatischer Videokonvertierung in mehrere Qualitätsstufen (480p/720p/1080p), HLS-Streaming mit nahtlosem Qualitätswechsel, Redis-Hintergrundverarbeitung, echter Thumbnail-Extraktion und PostgreSQL-Datenbank. Vollständiges Netflix-Erlebnis mit Benutzerregistrierung, Wiedergabe-Fortschritt und Admin-Panel.',
+    
+    'projects.angularPortfolio.title': 'Angular Portfolio - Professionelle Präsentation',
+    'projects.angularPortfolio.description': 'Anspruchsvolle Angular 17 Portfolio-Website mit modernen Standalone Components, mehrsprachiger Unterstützung (EN/DE), fortgeschrittenem SCSS-Styling mit individuellen Animationen, interaktiven Modals und responsivem Design. Zeigt professionelle UI/UX-Fähigkeiten mit individuellem Design-System, sanften Übergängen und umfassenden Skill-Demonstrationen inkl. Growth-Mindset-Popup.',
     
     // Contact
     'contact.title': 'Lass uns zusammen\u00ADarbeiten',
